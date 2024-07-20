@@ -143,6 +143,7 @@ body {
   background-color: var(--color-three);
 }
 
+/*-----*/
 .aside__contenedor {
   padding: 2rem;
 }
@@ -150,20 +151,55 @@ body {
 .contenedor__aside-title {
   font-style: normal;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 120%;
   text-align: center;
   margin-top: 10px;
   padding: 16px;
+  color: var(--color-text-thre);
 }
 
 .contenedor__aside-parrafo {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   text-align: center;
   margin: 0.5rem;
   line-height: 150%;
+  color: var(--color-text-one);
+}
+/* ---- */
+
+.resultado__textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 620px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: transparent;
+  outline: none;
+  field-sizing: content;
+  resize: none;
+  font-size: 1.6rem;
+  border: 1px;
+  font-weight: 400;
+  line-height: 36px;
+  font-family: var(--fonts-principal);
+  color: var(--color-text-one);
+  caret-color: transparent;
+  pointer-events: none;
 }
 
+.resultado__copiar {
+  height: 50px;
+  width: 360px;
+  border: 1px solid var(--color-four);
+  background-color: var(--color-one);
+  color: var(--color-text-thre);
+  border-radius: 16px;
+  font-weight: 400;
+}
+
+/*-footer-*/
 .footer {
   margin-top: 1.8rem;
   justify-content: center;
