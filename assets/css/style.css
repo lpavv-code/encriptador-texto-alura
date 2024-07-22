@@ -8,10 +8,10 @@
 
   --color-text-one: #48637a;
   --color-text-two: #a8abb8;
-  --color-text-thre: #052863;
+  --color-text-three: #052863;
   --color-text-four: #f8f8f8;
 
-  --fonts-principal: "Inter";
+  --font-principal: "Inter";
 }
 
 * {
@@ -20,31 +20,31 @@
   font-size: 16px;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: var(--fonts-principal);
+  font-family: var(--font-principal);
 }
 
 body {
   background-color: var(--color-one);
 }
 
-/*-hide-*/
+/* Hide */
 .hide {
   display: none;
 }
 
-/*-imagenes-*/
-.advertencia__img {
+/* Images */
+.warning__img {
   width: 2rem;
   opacity: 0.8;
 }
 
-.img__espera {
+.aside__img--waiting {
   width: 15rem;
   height: auto;
   opacity: 0.9;
 }
 
-/*-Header-*/
+/* Header */
 .header {
   position: absolute;
   margin: 40px 0px 0px 40px;
@@ -56,8 +56,9 @@ body {
   width: 140px;
   height: 60px;
 }
-/*-Section-*/
-.contenedor {
+
+/* Section */
+.container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -65,7 +66,7 @@ body {
   flex-wrap: wrap;
 }
 
-/*-Main-*/
+/* Main */
 .main {
   max-width: 680px;
   width: 50%;
@@ -77,29 +78,28 @@ body {
   min-height: 420px;
   background: transparent;
   outline: none;
-  field-sizing: content;
   resize: none;
   font-size: 1.6rem;
   border: none;
-  font-family: var(--fonts-principal);
+  font-family: var(--font-principal);
 }
 
 .main__textarea::placeholder {
   color: var(--color-text-one);
 }
 
-.main__advertencia {
+.main__warning {
   display: flex;
   align-items: center;
 }
 
-.advertencia__text {
+.warning__text {
   padding-left: 8px;
   color: var(--color-text-two);
   line-height: 150%;
 }
 
-.main__botones {
+.main__buttons {
   display: flex;
   flex-direction: row;
   padding: 16px 0 30px 0;
@@ -107,26 +107,32 @@ body {
   gap: 24px;
 }
 
-.botones {
+.buttons {
   height: 50px;
   width: 360px;
   border: 1px solid var(--color-four);
   border-radius: 16px;
   font-weight: 400;
+  transition: transform 0.1s ease-in-out;
 }
 
-.main__botones-encrypt {
+.buttons:active {
+  transform: scale(0.95);
+}
+
+.main__button--encrypt {
   background-color: var(--color-four);
   color: var(--color-text-four);
   border-color: var(--color-four);
 }
 
-.main__botones-desencrypt {
-  color: var(--color-text-thre);
+.main__button--decrypt {
+  color: var(--color-text-three);
   background-color: var(--color-three);
   border-color: var(--color-four);
 }
-/*-aside-*/
+
+/* Aside */
 .aside {
   box-shadow: 1px 1px 10px 1px var(--color-two);
   height: 44rem;
@@ -143,12 +149,11 @@ body {
   background-color: var(--color-three);
 }
 
-/*-----*/
-.aside__contenedor {
+.aside__container {
   padding: 2rem;
 }
 
-.contenedor__aside-title {
+.aside__title {
   font-style: normal;
   font-weight: bold;
   font-size: 1.5rem;
@@ -156,50 +161,53 @@ body {
   text-align: center;
   margin-top: 10px;
   padding: 16px;
-  color: var(--color-text-thre);
+  color: var(--color-text-three);
 }
 
-.contenedor__aside-parrafo {
+.aside__text {
   font-size: 0.9rem;
   text-align: center;
   margin: 0.5rem;
   line-height: 150%;
   color: var(--color-text-one);
 }
-/* ---- */
 
-.resultado__textarea {
+.aside__result {
   width: 100%;
   max-width: 400px;
+}
+
+.result__textarea {
+  width: 100%;
   height: 620px;
-  position: relative;
-  top: 0;
-  left: 0;
   background: transparent;
   outline: none;
-  field-sizing: content;
   resize: none;
   font-size: 1.6rem;
-  border: 1px;
+  border: 1px solid var(--color-three);
   font-weight: 400;
   line-height: 36px;
-  font-family: var(--fonts-principal);
+  font-family: var(--font-principal);
   color: var(--color-text-one);
   caret-color: transparent;
   pointer-events: none;
 }
 
-.resultado__copiar {
+.result__copy {
   height: 50px;
   width: 360px;
   border: 1px solid var(--color-four);
   background-color: var(--color-one);
-  color: var(--color-text-thre);
+  color: var(--color-text-three);
   border-radius: 16px;
   font-weight: 400;
 }
 
-/*-footer-*/
+.result__copy:active {
+  transform: scale(0.95);
+}
+
+/* Footer */
 .footer {
   margin-top: 1.8rem;
   justify-content: center;
@@ -211,4 +219,9 @@ body {
   height: 3.13rem;
   padding-top: 0.07rem;
   color: var(--color-text-two);
+}
+
+.footer__logo {
+  width: 140px;
+  height: 60px;
 }
