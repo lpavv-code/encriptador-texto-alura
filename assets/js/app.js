@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const invalidChars = /[^a-z\s]/g;
 
     if (invalidChars.test(value)) {
-      alert("Solo se permiten letras minúsculas sin acentos.");
+      alert("Solo se permiten letras minúsculas y sin acentos.");
       textarea.value = value.replace(invalidChars, "");
     }
   });
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     asideResult.classList.remove("hide");
   });
 
-  // Función para desencriptar el texto (opcional, ya que no se mencionó cómo hacerlo)
+  // Función para desencriptar el texto
   decryptButton.addEventListener("click", () => {
     let text = textarea.value;
     if (!text) return;
@@ -58,8 +58,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Función para copiar el texto
   copyButton.addEventListener("click", () => {
-    resultTextarea.select();
-    document.execCommand("copy");
-    alert("Texto copiado al portapapeles");
+    const textToCopy = resultTextarea.value;
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        alert("Texto copiado al portapapeles");
+      })
+      .catch((err) => {
+        console.error("Error al copiar el texto: ", err);
+      });
   });
 });
