@@ -270,7 +270,7 @@ body {
 /* Celular */
 @media (max-width: 375px) {
   .header {
-    margin: 10px 0px 10px 10px;
+    margin: 10px;
   }
 
   .container {
@@ -280,13 +280,27 @@ body {
   }
 
   .main {
-    margin: 50px 0 0 0;
     width: 100%;
+    padding: 16px;
+  }
+
+  .main__buttons {
+    flex-direction: column;
   }
 
   .aside {
-    margin: 10px 0;
-    width: 95%;
+    margin: 0;
+    padding: auto;
+    height: auto;
+  }
+
+  .aside__container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .aside__img--waiting {
+    display: none;
   }
 
   .main__textarea {
@@ -300,7 +314,7 @@ body {
   }
 
   .buttons {
-    width: 250px;
+    width: 100%;
   }
 
   .result__copy {
