@@ -3,60 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encryptador | Alura One</title>
+    <title>Encriptador | Alura Latam</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <img
-        class="header__logo"
+        class="header-logo"
         src="assets/img/Logo-A.png"
         alt="Logo de Alura Latam"
       />
     </header>
-    <!-- Contenedor section -->
-    <section class="container">
-      <!--Main-->
+    <!-- Main -->
+    <section class="contenido-wrap">
+      <!-- Section de ingreso de texto-->
       <main class="main">
-        <textarea
-          class="main__textarea"
-          placeholder="Ingrese el texto aquí"
-        ></textarea>
-        <div class="main__warning">
-          <img
-            class="warning__img"
-            src="assets/img/advertencia.png"
-            alt="Imagen de advertencia"
-          />
-          <p class="warning__text">Solo letras minúsculas y sin acento</p>
-        </div>
-        <div class="main__buttons">
-          <button class="buttons main__button--encrypt">Encriptar</button>
-          <button class="buttons main__button--decrypt">Desencriptar</button>
+        <div class="contenido-encriptador">
+          <textarea
+            class="text-ingreso"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+          <div class="advertencia">
+            <img
+              class="img-advertencia"
+              src="assets/img/advertencia.png"
+              alt="Advertencia"
+            />
+            <p class="parrafo-advertencia">
+              Solo letras minúsculas y sin acentos
+            </p>
+          </div>
+          <div class="botones">
+            <button class="boton boton-encriptar" onclick="btnEncriptar()">
+              Encriptar
+            </button>
+            <button
+              class="boton boton-descencriptar"
+              onclick="btnDesencriptar()"
+            >
+              Descencriptar
+            </button>
+          </div>
         </div>
       </main>
-      <!-- aside -->
-      <aside class="aside">
-        <div class="aside__container">
-          <img class="aside__img--waiting" src="assets/img/espera.png" alt="" />
-          <h2 class="aside__title">Ningún mensaje fue encontrado</h2>
-          <p class="aside__text">
-            Ingresa el texto que desees encriptar o desencriptar
-          </p>
+      <!-- Section resultado o espera-->
+        <div id="espera" class="espera">
+          <img
+            class="img-espera"
+            src="assets/img/espera.png"
+            alt="imagen de espera"
+          />
+          <div class="espera-contenido">
+            <h2 class="titulo-espera">Ningún mensaje fue encontrado</h2>
+            <p class="parrafo-espera">
+              Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+          </div>
         </div>
-        <div class="aside__result hide">
-          <textarea class="result__textarea" placeholder=""></textarea>
-          <button class="result__copy">Copiar</button>
+        <div id="resultado" class="resultado hide">
+          <div class="resultado-contenido">
+            <textarea
+              class="texto-resultado"
+              cols="20"
+              rows="10"
+              readonly
+            ></textarea>
+            <button class="boton boton-copiar">Copiar</button>
+          </div>
         </div>
       </aside>
     </section>
     <!-- Footer -->
     <footer class="footer">
-      <p class="footer__copyright">
-        Copyright &copy; Todos los derechos reservados.
-      </p>
-      <img class="footer__logo" src="assets/img/ONE.webp" alt="" />
+      <p class="footer-copyright">Dev: Patrick Vigo. | &copy; 2024</p>
+      <img class="footer-logo" src="assets/img/ONE.webp" alt="" />
     </footer>
     <script src="assets/js/app.js"></script>
   </body>
