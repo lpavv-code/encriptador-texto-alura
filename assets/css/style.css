@@ -56,21 +56,18 @@ body {
 
 .header {
   padding-bottom: 16px;
-  border: 2px solid red;
 }
 
 .contenido-wrap {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 2px solid #1a000a;
   padding: 0 20px 20px 20px;
   gap: 64px;
 }
 
 .main {
-  flex-grow: 3;
-  border: 2px solid brown;
+  flex-grow: 12;
   margin-top: 10px;
   padding: 10px;
 }
@@ -92,7 +89,6 @@ body {
   display: flex;
   gap: 8px;
   align-items: center;
-  border: 2px solid blue;
   height: 30px;
 }
 
@@ -104,7 +100,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  border: 2px solid yellowgreen;
   margin-top: 10px;
 }
 
@@ -114,6 +109,7 @@ body {
   border-radius: 24px;
   font-size: 1.25rem;
   font-weight: 600;
+  transition: transform 0.1s ease;
 }
 
 .boton-encriptar {
@@ -125,9 +121,12 @@ body {
   color: var(--color-four);
 }
 
+.boton:active {
+  transform: scale(0.95); /* Reduce el tamaño del botón */
+}
+
 .aside {
   flex-grow: 1;
-  border: 2px solid #48e;
 }
 
 .espera,
@@ -135,6 +134,9 @@ body {
   padding: 32px;
   border-radius: 32px;
   background-color: var(--color-two);
+  text-align: center;
+  box-shadow: 0 0 8px 9px #727b84;
+  border: 1px solid #1f2b50;
 }
 
 .espera-contenido {
@@ -143,7 +145,6 @@ body {
   justify-content: center;
   text-align: center;
   gap: 16px;
-  border: 2px solid blueviolet;
   min-height: 122px;
   color: var(--color-three);
 }
@@ -182,9 +183,46 @@ body {
 }
 
 /* Estilos responsivos para tablets */
-@media (max-width: 768px) {
+@media screen and (min-width: 700px) {
+  .botones {
+    flex-direction: row;
+  }
+
+  .boton {
+    width: 100%;
+  }
 }
 
-/* Estilos responsivos para móviles */
-@media (max-width: 368px) {
+/* Estilos responsivos para desktop */
+@media screen and (min-width: 1150px) {
+  .contenido-wrap {
+    flex-direction: row;
+  }
+
+  .main {
+    padding-left: 12%;
+  }
+
+  .img-espera {
+    display: inline-block;
+    padding-top: 200px;
+  }
+
+  .text-ingreso {
+    min-height: 600px;
+    max-width: 680px;
+  }
+
+  .espera,
+  .resultado {
+    min-height: 750px;
+    min-width: 350px;
+    width: 100%;
+  }
+
+  .texto-resultado {
+    min-height: 600px;
+    max-width: 350px;
+    text-justify: distribute-all-lines;
+  }
 }

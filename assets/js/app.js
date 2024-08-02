@@ -80,7 +80,21 @@ function desencriptar(parametroDesencriptado) {
 }
 
 function btnDesencriptar() {
-  const textoDesencriptado = desencriptar(textoIngreso.value);
+  const texto = textoIngreso.value;
+  if (texto === "") {
+    alert("Ingresa un texto para poder desencriptar");
+    return;
+  }
+
+  if (!/^[a-z\s]+$/.test(texto)) {
+    alert("Solo letras minúsculas y sin acentos");
+    return;
+  }
+
+  const textoDesencriptado = desencriptar(texto);
   textoResultado.value = textoDesencriptado;
   textoIngreso.value = "";
+
+  seccionEspera.classList.add("hide");
+  seccionResultado.classList.remove("hide");
 }
