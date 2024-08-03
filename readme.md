@@ -68,4 +68,4 @@ encriptador_alura_ONE
 
 ## Autor :black_nib:
 
-- Patrick Vigo- [@alizunega](https://github.com/lpavv-code)
+- Patrick Vigo-[Mi perlil](https://github.com/lpavv-code)
