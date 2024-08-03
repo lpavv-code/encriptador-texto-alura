@@ -68,7 +68,7 @@ encriptador_alura_ONE
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE](LICENSE) para detalles
+Este proyecto está bajo la Licencia (MIT LICENSE) - mira el archivo [LICENSE](LICENSE) para detalles
 
 ## Autor :black_nib:
 
