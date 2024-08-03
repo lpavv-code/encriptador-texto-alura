@@ -66,6 +66,10 @@ encriptador_alura_ONE
   </a>
 </p>
 
+## Licencia 📄
+
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE](LICENSE) para detalles
+
 ## Autor :black_nib:
 
 - Patrick Vigo-[Mi perlil](https://github.com/lpavv-code)
