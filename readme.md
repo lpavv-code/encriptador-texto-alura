@@ -41,6 +41,7 @@ encriptador_alura_ONE
 │   │   └── ONE.webp|   |
 │   └── js
 │   │   └── app.js
+├── LICENSE
 ├── index.html
 └── README.md
 ```
@@ -51,12 +52,10 @@ encriptador_alura_ONE
 
 ## Instrucciones :memo:
 
-> [!Intrucciones]
->
 > Ingresar sólo minúsculas y sin acentos.  
 > No acepta simbolos o números.  
 > No acepta caracteres especiales.  
-> No encriptara el texto vacio.
+> No encriptara si el texto esta vacio.
 
 ## Construido Con :hammer_and_wrench:
 
